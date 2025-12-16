@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ldaf"
+version = "0.1.0"
+description = "Lightweight Deep Anomaly Detection Framework (LDAF) for IoT devices (GMF + TAC + KD/SP/QAT scaffolds)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name="LDAF Authors"}]
+dependencies = [
+  "torch>=2.1",
+  "numpy>=1.23",
+  "pandas>=1.5",
+  "scikit-learn>=1.2",
+  "pyyaml>=6.0",
+  "tqdm>=4.66"
+]
+
+[tool.setuptools]
+packages = ["ldaf", "ldaf.data", "ldaf.models", "ldaf.compression"]
